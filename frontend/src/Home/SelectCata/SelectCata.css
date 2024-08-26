@@ -1,0 +1,41 @@
+.SelectCata {
+    display: grid; 
+    width: 80%;
+    /* height: 400px;  */
+    margin: auto;
+    margin-top: 110px;
+    /* justify-content: center; */
+    gap: 10px;
+    grid-template-columns: 400px 400px 400px;
+    overflow: hidden;   
+}
+
+.imgdata img {
+    width: 100%; /* Adjusted width to fit the container */
+    height: 100%;
+    position: relative;
+    object-fit:contain;
+    display: block;
+    border-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.cataname{
+    position: absolute;
+    top: 1940px; 
+    margin-left: 140px;
+    z-index: 3;
+    background-color: rgb(255, 255, 255);
+    padding: 15px 30px; 
+    font-weight: 500; 
+    /* border: 1px solid brown; */
+    border: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease-in-out; 
+   
+} 
+
+.cataname:hover {
+    background-color: rgb(24, 13, 233);
+    color: aliceblue;
+}

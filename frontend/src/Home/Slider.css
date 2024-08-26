@@ -1,0 +1,45 @@
+/* Slider container */
+.slider {
+  position: relative;
+  width: 100%;
+}
+
+/* Style for images in the slider */
+.slider img {
+  width: 100%;
+  height: 670px;
+  object-fit: cover;
+}
+
+/* Navigation directions (prev/next buttons) */
+.directions {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Style for the previous button */
+.prev {
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%; /* Optional: makes the button circular */
+  padding: 15px; /* Adjust padding for better clickable area */
+}
+
+/* Style for the next button */
+.next {
+  right: 10px; 
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 15px; 
+  color: rgb(249, 249, 249);
+}

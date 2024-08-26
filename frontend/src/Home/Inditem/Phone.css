@@ -1,0 +1,42 @@
+.main{
+    display:flex;
+    width: 90%;
+    padding: 40px;
+    margin: auto;
+    /* background-color: antiquewhite; */
+}
+.left{
+    width: 26%;
+    position:static;
+}
+.right{
+    width: 74%;   
+}
+.range{
+    align-items: center;
+    flex-direction: column;   
+}
+.check{
+    display: flex;
+    flex-direction: column;   
+}
+.rangee{
+    display: flex;
+    align-items: center;
+}
+.image img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+.listitem{
+    display: flex;
+    /* justify-content: space-around; */
+    margin-top: 5px;
+    gap: 30px;
+
+}
+.phonelink{
+    text-decoration: none;
+    color: inherit;
+}

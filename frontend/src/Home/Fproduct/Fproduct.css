@@ -1,0 +1,24 @@
+.fproduct{
+    align-items: center;
+    width: 65%;
+    margin: auto;
+    margin-top: 100px;
+}
+.map{
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 15px;
+    align-self: center;
+    justify-content: center;
+}
+.fproduct-img img{
+    width: 260px;
+    height:250px;
+    object-fit: contain;
+
+}
+.fproduct-map{
+    color: rgb(0, 0, 0);
+    gap: 15px;
+    margin-top: 45px;
+}

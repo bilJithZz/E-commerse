@@ -1,0 +1,33 @@
+.main{
+    display:flex;
+    width: 90%;
+    padding: 40px;
+    margin: auto;
+  
+}
+.left{
+    width: 26%;
+}
+.right{
+    width: 74%;   
+}
+.range{
+    align-items: center;
+    flex-direction: column;   
+}
+.check{
+    display: flex;
+    flex-direction: column;   
+}
+.rangee{
+    display: flex;
+    align-items: center;
+}
+.filterddata{
+    display: flex;
+   
+}
+ .link{
+    text-decoration: none;
+    color: inherit;
+}
