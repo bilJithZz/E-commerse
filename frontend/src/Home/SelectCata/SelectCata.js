@@ -1,5 +1,6 @@
 import React from 'react';
 import './SelectCata.css';
+import { Link } from 'react-router-dom';
 
 const SelectCata = () => {
   const productsdata = [
@@ -12,12 +13,14 @@ const SelectCata = () => {
     <div className='SelectCata'>
       {productsdata.map((item) => (
         <div key={item.id} className="catadata">
-          <div className="imgdata">
-            <img src={item.url} alt={item.name} />
-          </div>
-          <button className="cataname">
-            {item.name}
-          </button>
+          <Link to={`/${item.name}`} className="category-link">
+            <div className="imgdata">
+              <img src={item.url} alt={item.name} />
+            </div>
+            <div className="cataname">
+              {item.name}
+            </div>
+          </Link>
         </div>
       ))}
     </div>

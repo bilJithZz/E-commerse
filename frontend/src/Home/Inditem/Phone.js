@@ -4,10 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../../Redux/ReduxSlice';
 import { Link } from 'react-router-dom';
 
-
 const Phone = () => {
   const [range, setRange] = useState(1000);
-  const [selectedCategory, setSelectedCategory] = useState(["mobile"]);
+  const [selectedCategory, setSelectedCategory] = useState([]);
   const dispatch = useDispatch();
   const { items, status, error } = useSelector((state) => state.data);
 
@@ -23,15 +22,14 @@ const Phone = () => {
     return <div>Error: {error}</div>;
   }
 
- 
-  const filteredItems = items.filter(item => item.description.toLowerCase().includes('mobile'));
+  // Filter items by category and price range
+  const filteredItems = items
+    .filter(item => {
+      // Check if item belongs to any selected category
+      const isInCategory = selectedCategory.length === 0 || selectedCategory.includes(item.category);
+      return isInCategory && item.price <= range;
+    });
 
-  const filteredItemByPrice=filteredItems.filter((item)=>
-    item.price<=range
-  )
-
-
-  
   return (
     <div className='main'>
       <div className="left">
@@ -80,20 +78,19 @@ const Phone = () => {
         </div>
       </div>
       <div className="right">
-        {filteredItemByPrice.length > 0 ? (
-          filteredItems.map((item, key) => (
-            <Link className="phonelink" to={`/product/${item.id}`}>
-            <div className="listitem" key={key}>
-              <div className="image">
-                <img src={item.url} alt="img" />
+        {filteredItems.length > 0 ? (
+          filteredItems.map((item) => (
+            <Link className="phonelink" to={`/product/${item.id}`} key={item.id}>
+              <div className="listitem">
+                <div className="image">
+                  <img src={item.url} alt="img" />
+                </div>
+                <div className="disc">
+                  <h3>{item.name}</h3> {/* Assuming `item.name` is the correct field */}
+                  <p>{item.detail}</p>
+                  <h3>Price: ${item.price}</h3>
+                </div>
               </div>
-              <div className="disc">
-                <h3>{item.gadegt}</h3>
-                <p>{item.detail}</p>
-                {/* <p>{item.description}</p> */}
-                <h3>Price: ${item.price}</h3>
-              </div>
-            </div>
             </Link>
           ))
         ) : (
@@ -105,9 +102,3 @@ const Phone = () => {
 };
 
 export default Phone;
-
-
- // const filteredItems = items.filter(item => 
-  //   (selectedCategory.length === 0 || selectedCategory.includes(item.description)) &&
-  //   item.price <= range
-  // );
