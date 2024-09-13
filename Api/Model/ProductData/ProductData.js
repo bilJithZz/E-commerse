@@ -67,7 +67,7 @@ const productsdata = [
         description: 'mobile',
         dumyprice:1000, 
         price: 848,
-        catagorie:"offer",
+        catagorie:" offer product",
         detail:"Google Pixel 7a - Unlocked Android Cell Phone - Smartphone with Wide Angle Lens and 24-Hour Battery - 128 GB – Charcoal" },
     { 
         id: 8,
@@ -77,7 +77,7 @@ const productsdata = [
          description: 'Accessories', 
          dumyprice:1000,
          price: 558,
-         catagorie:"offer",
+         catagorie:" offer product",
          detail:"Google Pixel 7a - Unlocked Android Cell Phone - Smartphone with Wide Angle Lens and 24-Hour Battery - 128 GB – Charcoal" },
     { 
         id: 9,
@@ -87,7 +87,7 @@ const productsdata = [
         description: 'Accessories',
         dumyprice:1456 ,
         price: 999,
-        catagorie:"offer",
+        catagorie:" offer product",
         detail:"Google Pixel 7a - Unlocked Android Cell Phone - Smartphone with Wide Angle Lens and 24-Hour Battery - 128 GB – Charcoal" },
     { 
         id: 10, 

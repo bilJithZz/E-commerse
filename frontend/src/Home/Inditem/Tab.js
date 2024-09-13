@@ -8,15 +8,13 @@ const Phone = () => {
     const [selectedCategory, setSelectedCategory] = useState([]);
     const { items } = useSelector((state) => state.data);
 
-    // Filter by category and price range
+    
     const filteredItems = items
         .filter((item) => {
-            // Check if item matches any selected category
-            const isInCategory = selectedCategory.length === 0 || selectedCategory.includes(item.category);
+            const isInCategory = selectedCategory.length === 0 || selectedCategory.includes(item.name);
             return isInCategory && item.description.toLowerCase().includes("tab") && item.price <= range;
         });
 
-    // Handler for checkbox change
     const handleCategoryChange = (category) => (e) => {
         setSelectedCategory(prevState =>
             e.target.checked
@@ -50,9 +48,9 @@ const Phone = () => {
                         <input 
                             type="checkbox" 
                             id="mi" 
-                            onChange={handleCategoryChange('MI')}
+                            onChange={handleCategoryChange('Samsung')}
                         />
-                        <label htmlFor="mi">MI</label>
+                        <label htmlFor="mi">Samsung</label>
                     </div>
                 </div>
                 <div className="range">
@@ -81,7 +79,7 @@ const Phone = () => {
                                     <img src={item.url} alt="Product" />
                                 </div>
                                 <div className="disc">
-                                    <h3>{item.name}</h3> {/* Ensure this is the correct field */}
+                                    <h3>{item.name}</h3> 
                                     <p>{item.detail}</p>
                                     <span>Price: ${item.price}</span>
                                 </div>

@@ -1,42 +1,142 @@
-.main{
-    display:flex;
-    width: 90%;
-    padding: 40px;
-    margin: auto;
-    /* background-color: antiquewhite; */
-}
-.left{
-    width: 26%;
-    position:static;
-}
-.right{
-    width: 74%;   
-}
-.range{
+/* General styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .main {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+  }
+  
+  .left {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .right {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .check, .range {
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .checkbox {
+    margin-bottom: 10px;
+    display: flex;
     align-items: center;
-    flex-direction: column;   
-}
-.check{
-    display: flex;
-    flex-direction: column;   
-}
-.rangee{
+  }
+  
+  .checkbox input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .rangee {
     display: flex;
     align-items: center;
-}
-.image img{
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
-}
-.listitem{
-    display: flex;
-    /* justify-content: space-around; */
-    margin-top: 5px;
-    gap: 30px;
-
-}
-.phonelink{
+    gap: 10px;
+  }
+  
+  input[type="range"] {
+    flex-grow: 1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    background: #ddd;
+    height: 8px;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .phonelink {
     text-decoration: none;
     color: inherit;
-}
+  }
+  
+  .listitem {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    height: 300px; /* Set a fixed height for the item */
+    position: relative; /* For positioning the image */
+  }
+  
+  .listitem:hover {
+    transform: scale(1.02);
+  }
+  
+  .image {
+    width: 100%;
+    height: 60%; /* Adjust this value as needed */
+    overflow: hidden; /* Ensure the image doesn't overflow */
+  }
+  
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+    display: block;
+  }
+  
+  .disc {
+    padding: 10px;
+    flex: 1; /* Allows the description to fill remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .disc h3 {
+    margin: 10px 0;
+    color: #007bff;
+    font-size: 1.1em;
+  }
+  
+  .disc p {
+    color: #666;
+    font-size: 0.9em;
+    margin: 0;
+  }
+  
+  .disc h3:last-of-type {
+    color: #333;
+  }
+  

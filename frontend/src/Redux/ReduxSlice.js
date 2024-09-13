@@ -12,11 +12,11 @@ const dataSlice = createSlice({
   name: 'data',
   initialState: {
     items: [],
-    status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
+    status: 'idle',
     error: null
   },
   reducers: {
-    // You can define additional sync reducers here if needed
+    
   },
   extraReducers: (builder) => {
     builder

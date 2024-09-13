@@ -25,7 +25,6 @@ const Phone = () => {
   // Filter items by category and price range
   const filteredItems = items
     .filter(item => {
-      // Check if item belongs to any selected category
       const isInCategory = selectedCategory.length === 0 || selectedCategory.includes(item.category);
       return isInCategory && item.price <= range;
     });
@@ -86,7 +85,7 @@ const Phone = () => {
                   <img src={item.url} alt="img" />
                 </div>
                 <div className="disc">
-                  <h3>{item.name}</h3> {/* Assuming `item.name` is the correct field */}
+                  <h3>{item.name}</h3>
                   <p>{item.detail}</p>
                   <h3>Price: ${item.price}</h3>
                 </div>
