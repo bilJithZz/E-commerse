@@ -11,10 +11,7 @@ const Fproduct = () => {
 
     const { items } = useSelector((state) => state.data);
     console.log(items)
-    // const filteredItems=items.filter((item)=>{
-    //     const isInCategory= item.catagorie.toLowerCase().includes("offer product") ;
-    //     return isInCategory;
-    // })
+   
 
     return (
         <div className="fproduct">

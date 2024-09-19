@@ -1,24 +1,98 @@
-.fproduct{
-    align-items: center;
-    width: 65%;
-    margin: auto;
-    margin-top: 100px;
-}
-.map{
-    display: flex; 
+.fproduct {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+   
+  }
+  
+  .fproduct-h {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .fproduct-h h2 {
+    font-size: 2.5rem;
+    color: #222;
+    font-weight: 700;
+  }
+  
+  .lorem {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: #777;
+    line-height: 1.8;
+    padding: 0 20px;
+  }
+  
+  .map {
+    display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    align-self: center;
+    gap: 20px;
     justify-content: center;
-}
-.fproduct-img img{
-    width: 260px;
-    height:250px;
+  }
+  
+  .fproduct-map {
+    border-radius: 12px;
+    overflow: hidden;
+  
+    width: 320px; /* Slightly wider for a more spacious look */
+    height: 420px; /* Increased height for a more balanced card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .fproduct-map:hover {
+    transform: translateY(-10px);
+    /* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); */
+  }
+  
+  .fproduct-img {
+    width: 67%;
+    height: 60%; 
+    overflow: hidden;
+   
+  }
+  
+  .fproduct-img img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-
-}
-.fproduct-map{
-    color: rgb(0, 0, 0);
-    gap: 15px;
-    margin-top: 45px;
-}
+    transition: transform 0.3s ease;
+  }
+  
+  .fproduct-map:hover .fproduct-img img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  .product-disc {
+    padding: 20px;
+    height: 40%; /* Adjusted for balance */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .product-disc h4 {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    .map {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .fproduct-map {
+      width: 90%;
+      height: auto; /* Allow height to adjust automatically on smaller screens */
+    }
+  }
+  

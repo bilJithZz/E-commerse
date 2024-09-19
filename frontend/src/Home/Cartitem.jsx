@@ -54,7 +54,7 @@ const Cartitem = () => {
     }
   };
 
-  // Calculate total price
+
   const totalPrice = items.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
