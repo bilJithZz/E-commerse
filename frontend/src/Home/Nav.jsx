@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import {MyContext} from '../useContext/AuthContext'
 import { useContext } from 'react';
+import { CiSearch } from "react-icons/ci";
+
 
 const Nav = () => {
 
@@ -25,6 +27,10 @@ const Nav = () => {
         <Link className='link 3' to="/accessories">
           <p>Accessories</p>
         </Link>
+      </div>
+      <div className="search">
+        <input type="text" placeholder='search here' />
+        <CiSearch />
       </div>
       <Link className='link 4' to='/'>
         <div className='midnav'>
