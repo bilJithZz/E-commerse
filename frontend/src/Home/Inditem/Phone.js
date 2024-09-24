@@ -22,7 +22,6 @@ const Phone = () => {
     return <div>Error: {error}</div>;
   }
 
-  // Filter items by category and price range
   const filteredItems = items
     .filter(item => {
       const isInCategory = selectedCategory.length === 0 || selectedCategory.includes(item.category);

@@ -8,7 +8,6 @@ const Phone = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
   const { items } = useSelector((state) => state.data);
 
-  // Handle category checkbox changes
   const handleCategoryChange = (e) => {
     const { id, checked } = e.target;
     setSelectedCategories(prev =>
@@ -18,7 +17,6 @@ const Phone = () => {
     );
   };
 
-  // Filtering items based on description and selected categories
   const filteredItems = items.filter(item => {
     const withinRange = item.price <= range;
     const inCategory = selectedCategories.length === 0 || selectedCategories.includes(item.category);

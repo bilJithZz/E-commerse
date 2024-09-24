@@ -6,7 +6,7 @@ import Footer from './Home/Footer';
 import Login from './Home/Login/Login';
 import Register from './Home/Register/Register';
 import Nav from './Home/Nav';
-import ProductDetails from './Home/ProductsDetails';
+import Details from './Home/Details';
 import Home from './Home';
 import Cartitem from './Home/Cartitem';
 import Phone from './Home/Inditem/Phone';
@@ -30,7 +30,7 @@ const App = () => {
         <Route path="/" element={isLoggedIn ? <Home /> : <login/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/product/:productId" element={<ProductDetails quantity={quantity} setQuantity={setQuantity} />} />
+        <Route path="/product/:productId" element={<Details quantity={quantity} setQuantity={setQuantity} />} />
         <Route path="/cart" element={<Cartitem quantity={quantity} />} />
         <Route path="/phone" element={<Phone />} />
         <Route path="/accessories" element={<Accessories />} />

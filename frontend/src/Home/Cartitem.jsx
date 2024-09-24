@@ -71,7 +71,7 @@ const Cartitem = () => {
             </div>
             <div className="cartpayment">
               <h3>{product.name}</h3>
-              <Divider className="divider2" />
+              {/* <Divider className="divider2" /> */}
               <div className="product">
                 <div className="productprice">
                   <p>{product.description || 'No description available'}</p>

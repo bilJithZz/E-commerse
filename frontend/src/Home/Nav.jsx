@@ -28,10 +28,10 @@ const Nav = () => {
           <p>Accessories</p>
         </Link>
       </div>
-      <div className="search">
+      {/* <div className="search">
         <input type="text" placeholder='search here' />
         <CiSearch />
-      </div>
+      </div> */}
       <Link className='link 4' to='/'>
         <div className='midnav'>
           Shopei
